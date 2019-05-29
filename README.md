@@ -1,3 +1,5 @@
+For Debian or Ubuntu: apt-get install docker.io -y
+
 RUN on Linux: docker run -i -p 6878:80 leoelan/acestream-nginx-proxy
 
 English example:
