@@ -39,5 +39,4 @@ RUN echo 'root:toor' |chpasswd
 
 EXPOSE 80
 
-ENTRYPOINT ["service", "monit","start"]
-ENTRYPOINT ["service", "nginx", "start"] 
+ENTRYPOINT ["service", "monit","start","&&","service","nginx","start"]
