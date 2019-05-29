@@ -24,9 +24,14 @@ RUN cd /tmp/ && mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream
 ADD acestream.sh /opt/acestream
 RUN chmod +x /opt/acestream/acestream.sh
 ADD acestream.conf /etc/monit/conf.d
+ADD monitrc /etc/monit/monitrc
 RUN service monit restart
 
 # Replace nginx config
 COPY default /etc/nginx/sites-available/default
 RUN service nginx restart
+
+#sshd user
+RUN echo 'root:toor' |chpasswd
+
 EXPOSE 22 80
