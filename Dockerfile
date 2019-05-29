@@ -28,18 +28,18 @@ COPY acestream.conf /etc/monit/conf.d
 RUN chmod 777 /etc/monit/monitrc
 COPY monitrc /etc/monit/monitrc
 RUN chmod 600 /etc/monit/monitrc
-RUN service monit start
+#RUN service monit start
 
 # Replace nginx config
 COPY default /etc/nginx/sites-available/default
-RUN service nginx restart
+#RUN service nginx restart
 
 #sshd user
 RUN echo 'root:toor' |chpasswd
 
 EXPOSE 80
 
-COPY start.sh /start.sh
+#COPY start.sh /start.sh
 #RUN chmod 777 /start.sh
 CMD service monit start && service nginx start
 
