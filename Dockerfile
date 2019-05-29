@@ -29,3 +29,4 @@ RUN service monit restart
 # Replace nginx config
 COPY default /etc/nginx/sites-available/default
 RUN service nginx restart
+EXPOSE 22 80
