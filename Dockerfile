@@ -41,4 +41,6 @@ EXPOSE 80
 
 COPY start.sh /start.sh
 RUN chmod 777 /start.sh
-CMD /start.sh
+CMD service monit start
+CMD service nginx start
+
