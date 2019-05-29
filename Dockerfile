@@ -25,9 +25,9 @@ COPY acestream.sh /opt/acestream
 RUN chmod +x /opt/acestream/acestream.sh
 RUN service monit stop
 COPY acestream.conf /etc/monit/conf.d
-#RUN chmod 777 /etc/monit/monitrc
+RUN chmod 777 /etc/monit/monitrc
 COPY monitrc /etc/monit/monitrc
-#RUN chmod 600 /etc/monit/monitrc
+RUN chmod 600 /etc/monit/monitrc
 RUN service monit start
 
 # Replace nginx config
