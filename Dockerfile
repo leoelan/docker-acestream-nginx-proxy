@@ -8,7 +8,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
     monit \
     unzip \
     nginx \
-    wget
+    wget \
+    net-tools
 # Acestream
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libpython2.7-dev \
