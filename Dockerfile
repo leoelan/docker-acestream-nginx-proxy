@@ -43,4 +43,4 @@ EXPOSE 80
 
 #COPY start.sh /start.sh
 #RUN chmod 777 /start.sh
-#CMD nginx && /opt/acestream/start-engine --client-console
+CMD nginx && /opt/acestream/start-engine --client-console
