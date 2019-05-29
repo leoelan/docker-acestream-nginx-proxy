@@ -14,7 +14,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libpython2.7-dev \
     python-apsw \
     python-m2crypto \
-    python-apsw
+    python-apsw \
+    python-setuptools
 
 RUN cd /tmp/ && wget "http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz"
 RUN cd /tmp/ && tar zxvf acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz
