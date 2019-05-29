@@ -37,4 +37,7 @@ RUN service nginx restart
 #sshd user
 RUN echo 'root:toor' |chpasswd
 
-EXPOSE 22 80
+EXPOSE 80
+
+ENTRYPOINT ["service", "monit","start"]
+ENTRYPOINT ["service", "nginx", "start"] 
