@@ -24,9 +24,9 @@ RUN cd /tmp/ && mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream
 COPY acestream.sh /opt/acestream
 RUN chmod +x /opt/acestream/acestream.sh
 COPY acestream.conf /etc/monit/conf.d
-RUN chomd 777 /etc/monit/monitrc
+RUN chmod 777 /etc/monit/monitrc
 COPY monitrc /etc/monit/monitrc
-RUN chomd 600 /etc/monit/monitrc
+RUN chmod 600 /etc/monit/monitrc
 RUN service monit restart
 
 # Replace nginx config
