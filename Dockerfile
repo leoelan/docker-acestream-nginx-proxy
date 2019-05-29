@@ -23,7 +23,7 @@ RUN cd /tmp/ && mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream
 # ADD scripts into monit
 COPY acestream.sh /opt/acestream
 RUN chmod +x /opt/acestream/acestream.sh
-COPY acestream.conf /etc/monit/conf.d
+
 COPY acestream.conf /etc/monit/conf-enabled
 RUN service monit restart
 
